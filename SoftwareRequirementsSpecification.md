@@ -206,7 +206,7 @@ _Träwelling_ should be accessible with all modern browsers.
 The browser will connect to the server over `HTTPS` on port `443`. An unencrypted connection over `HTTP` on port `80` shall not be supported.
 
 ### 3.10 Licensing Requirements
-The project will be licensed with the [AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html) License. Used packages should not conflict with this License. Preferrably packages with the MIT License should be used.
+The project will be licensed with the [AGPL-3.0][AGPL] License. Used packages should not conflict with this License. Preferrably packages with the MIT License should be used.
 
 ### 3.11 Legal, Copyright, and Other Notices
 The _Träwelling_ team will not take any responsibility for incorrect bills or lost data. The _Träwelling_ logo
@@ -230,6 +230,6 @@ The following Clean Code standards are going to be applied to the code as far as
  - Thomas Englert
  - Marius Holwein
 
-[UseCaseDiagram]:   traewelling.png
+[UseCaseDiagram]:   images/generalUsecase.png
 [GoogleGuidelines]: https://google.github.io/styleguide/javaguide.html
-
+[AGPL]: https://www.gnu.org/licenses/agpl-3.0.en.html
