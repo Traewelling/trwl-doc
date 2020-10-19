@@ -29,14 +29,14 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-This Software Requirements Specification was created to collect and organize the requirements for the Träwelling website.
+This Software Requirements Specification was created to collect and organize the requirements for the _Träwelling_ website.
 It includes a thorough description of the expected functionality for the project, as well as the nonfunctional requirements.
 These are crucial for the purposes of establishing the understanding between the suppliers of the software and the customers,
 as well as minimizing the risks connected to the misinterpreting customer’s expectations. The document will furthermore
 provide the basis for costs-estimation and later validation of the results achieved.
 
 ### 1.2 Scope
-This SRS applies to the entire Träwelling project. Träwelling is a free Website for tracking and sharing your träwelling expirinces by bus, sub and train.
+This SRS applies to the entire _Träwelling_ project. _Träwelling_ is a free Website for tracking and sharing your träwelling expirinces by bus, sub and train.
 
 ACTORS: There are two types of actors: **träwellers** and **general visitors**
 
@@ -52,11 +52,22 @@ SUBSYSTEMS:
 
 | Abbrevation |                                        |
 | ----------- | -------------------------------------- |
-| SRS         | Software Requirements Specification    |
+| SRS         | Software Requirements Specification     |
 | UC          | Use Case                               |
 | n/a         | not applicable                         |
 | tbd         | to be determined                       |
 | FAQ         | Frequently asked Questions             |
+| HTTP	      | Hyperrext Transfer Protocol            |
+| HTTPS       | HTTP Secure                            |
+| REST        | Representational state transfer        |
+| API         | application programming interface      |
+| MVC         | Model, View, and Controller            |
+| MIT         | Massachusetts Institute of Technology  |
+| PHP         | PHP: Hypertext Preprocessor            |
+| AGPL        | Affero General Public License           |
+| UI          | User Interface                         |
+| SQL         | Structured Query Language              |
+
 
 | Definition                          |     |
 | ----------------------------------- | --- |
@@ -67,8 +78,9 @@ SUBSYSTEMS:
 
 | Title                                                              | Date       | Publishing organization   |
 | -------------------------------------------------------------------|:----------:| ------------------------- |
-| [Träwelling Blog](https://traewelling.wordpress.com/)                | 2020-10-17 | Träwelling Team             |
-| [GitHub - Repository](http://github.com/traewelling/traewelling)     | 2020-10-17 | Träwelling Team             |
+| [Träwelling Blog](https://traewelling.wordpress.com/)              | 2020-10-17 | Träwelling Team             |
+| [GitHub - Repository](http://github.com/traewelling/traewelling)   | 2020-10-17 | Träwelling Team             |
+| [Träwelling Twitter](https://twitter.com/traewelling)              |            | Träwelling Team           |  
 
 
 ### 1.5 Overview
@@ -82,7 +94,7 @@ section "3.1 Functionality". Further requirements like usability and supportabil
 ## 2. Overall Description
 
 ### 2.1 Vision
-We love trains.
+We love trains. We want to give everyone the joy of tracking their travels and share them with other people
 
 ### 2.2 Use Case Diagram
 ![Träwelling Use Case Diagram][UseCaseDiagram]
@@ -91,16 +103,13 @@ We love trains.
 ## 3. Specific Requirements
 
 ### 3.1 Functionality
-This section will list all functional requirements for "Träwelling" and explain their functionality. Each of the following
+This section will list all functional requirements for _Träwelling_ and explain their functionality. Each of the following
 subsections represents a subsystem of our application.
 
 #### 3.1.1 Membership
-
+A user has to create an account to be able to use _Träwelling_ fully. They will need to register either via mail and password or via social media (e.g. Twitter, Mastodon, Apple, etc.).
 
 #### 3.1.2 Check in
-
-
-#### 3.1.3 Basic interaction
 
 
 ### 3.2 Usability
@@ -123,8 +132,10 @@ during nighttime as it is very unlikely that users upload or change data at nigh
 "rush hours" when most people go are travelling. The time to repair bugs should be as low as possible.
 
 #### 3.3.2 Defect Rate
- - There must be no bugs ???
- - Loss of data ???
+ - The amount of bugs should be kept at a minimum
+   - Bugs should be fixed as soon as possible if they're a security issue
+ - Loss of data
+   - Incremental backups should be kept at a daily rate, full backups at a weekly rate
 
 ### 3.4 Performance
 
@@ -144,7 +155,12 @@ downloading all of existing data on the server.
 #### 3.5.1 Coding standards
 In order to maintain supportability and readability of our code, we will try to adopt the latest clean code standard as far as
 possible and use the [Google Java Style Guide][GoogleGuidelines] for naming conventions, formatting and programming
-practices throughout the project.
+practices throughout the project with a few additions:
+  - lineLimit of 120
+  - opening bracket of classes in a newline
+  - opening bracket of new methods in the same line
+
+This will also be defined in the `phpcs.xml`.
 
 #### 3.5.2 Maintenance Utilities
 In order to test language and platform versions, a continuous integration service is required which runs tests on
@@ -153,7 +169,7 @@ combinations of platform and language versions.
 ### 3.6 Design Constraints
 We are focused on providing a modern design regarding both code and application.
 
-As "Träwelling" is an website, the chosen programming language is PHP. The MVC architecture shall be used to
+As _Träwelling_ is an website, the chosen programming language is PHP. The MVC architecture shall be used to
 differentiate between UI and the actual logic.
 
 The server's operating system must support MySQL and programs compiled using PHP. A RESTful API shall be used to communicate between frontend and backend.
@@ -173,26 +189,28 @@ Currently there are no other purchased components.
 ### 3.9 Interfaces
 
 #### 3.9.1 User Interfaces
-There will be the following user interfaces implemented which will solely be available in the android application:
+There will be the following user interfaces implemented which also will be available in the android application:
  - **Registration screen** showing input fields to create an account
-  - **Dashboard screen**
-    - shows a hitlist woth träwellers
- - **noch paar sachen???**
+ - **Dashboard screen**
+   - shows a hitlist with posts of followings/all users
+ - **Checkin screen**
+ - **Profile screen**
+ - **Leaderboard**
 #### 3.9.2 Hardware Interfaces
 n/a
 
 #### 3.9.3 Software Interfaces
-“Träwelling” should be accessible with all modern browsers.
+_Träwelling_ should be accessible with all modern browsers.
 
 #### 3.9.4 Communications Interfaces
 The browser will connect to the server over `HTTPS` on port `443`. An unencrypted connection over `HTTP` on port `80` shall not be supported.
 
 ### 3.10 Licensing Requirements
-???
+The project will be licensed with the [AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html) License. Used packages should not conflict with this License. Preferrably packages with the MIT License should be used.
 
 ### 3.11 Legal, Copyright, and Other Notices
-The "Träwelling" team will not take any responsibility for incorrect bills or lost data. The "Träwelling" logo
-may only be used for the official "Träwelling" website.
+The _Träwelling_ team will not take any responsibility for incorrect bills or lost data. The _Träwelling_ logo
+may only be used for the official _Träwelling_ website.
 
 ### 3.12 Applicable Standards
 The following Clean Code standards are going to be applied to the code as far as possible:
