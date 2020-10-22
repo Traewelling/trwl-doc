@@ -16,11 +16,11 @@ In the search results the users will be listed one by one with a profile picture
      - User can go to profile page
 
 ### 2.1.1 Activity Diagram
-<!--![Organization Application Activity Diagram](../diagrams/UCs/CreateOperationActivityDiagramm.jpg)-->
+![User Searc h Diagram](../images/SearchUser.png)
 
 ### 2.1.2 Mock-up
-![Dashboard](../images/searchDashboard)
-![Search Results](../images/searchList)
+![Dashboard](../images/searchDashboard.jpg)
+![Search Results](../images/searchList.jpg)
 
 ### 2.1.3 Narrative
 ```gherkin
