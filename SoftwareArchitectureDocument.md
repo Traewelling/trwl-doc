@@ -36,7 +36,7 @@ n/a
 Templates aren´t no classes, in our project they are only HTML files.
 Our classes were only in model.py
 
-- [Diagram](https://github.com/soshalyze/socialyze_doc/blob/master/img_blog/LogicalView.png)
+Our overall class diagram can be found [here](images/MVC-Class-diagramm.png).
 
 
 ## 6. Process View
