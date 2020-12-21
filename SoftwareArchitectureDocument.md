@@ -20,7 +20,7 @@ The scope of this SAD is to show the architecture of the Träwelling project. Af
 
 
 ## 2. Architectural Representation
-Träwelling uses the MVC-Scheme of Laravel. You can see this [here](./images/OverallUsecaseDiagram.png)
+Träwelling uses the MVC-Scheme of Laravel. You can see this [here](./images/ModelViewControllerDiagram.jpg)
 
 ## 3.Architectural Goals and Constraints 
 We decided to use [DB-Rest](https://github.com/derhuerst/db-rest/) as an API-wrapper for the API of the Deutsche Bahn. 
