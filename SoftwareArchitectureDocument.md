@@ -30,26 +30,25 @@ For tweeting abraham's [twitteroauth](https://github.com/abraham/twitteroauth), 
 The frontend is realized with the [Bootstrap](https://getbootstrap.com) framework on top of Laravel's blade engine.
 
 ## 4. Use-Case View 
-n/a
+The overall use case diagram can be found [here](images/OverallUsecaseDiagram.png)
 
 ## 5. Logical View
-Templates aren´t no classes, in our project they are only HTML files.
-Our classes were only in model.py
-
 Our overall class diagram can be found [here](images/MVC-Class-diagramm.png).
-
+The views are in green, the controllers in red and the models yellow.
 
 ## 6. Process View
 n/a
 
 ## 7. Deployment View
-n/a
+The website is running in a cloud-based shared environment hosted by uberspace.de. We have access to all 20 Cores of the Intel(R) Xeon(R) Silver 4214 CPU @ 2.20GHz and up to 32GB RAM. Our network interface can handle up to 10GB/s over a redundant fiber interface.
+
 ## 8. Implementation View
 n/a
 
 ## 9. Data View
-We're using the MariaDB database to store our data. 
+We're using a MariaDB database to store our data. 
 
+You can see our structure [here](images/Database.png)
 
 ## 10. Size and Performance
 tbd
