@@ -48,11 +48,10 @@ n/a
 n/a
 
 ## 9. Data View
-We're using the PostgreSQL database to store our data. 
+We're using the MariaDB database to store our data. 
 
 
 ## 10. Size and Performance
 tbd
 
 ## 11. Quality
-We use PyCharm as our IDE and Django as our webframework.
