@@ -7,3 +7,5 @@ Currently this repo contains
    - [SearchUser](UCs/SearchUser.md)
    - [ChangeProfileToPrivate](UCs/ChangeProfileToPrivate.md)
    - [RequestFollow](UCs/RequestFollow.md)
+   - [BusinessCheckin](UCs/BusinessCheckin.md)
+   - [Checkin Visibility](UCs/Visibility.md)
